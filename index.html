@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+  <title>Take Note Project</title>
+  <style>
+    .justify-content-center li a {
+      border-bottom: 0.2rem solid red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card row">
+      <nav class="navbar stick-top navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.png" width="50px">
+          Keep Project</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+          </ul>
+          <form class="form-inline my-2 my-lg-8">
+            <div class="form-group col-md-8">
+              <div class="input-group-prepend">
+                <div class="input-container">
+
+                  <input class="form-control" type="text" name="filter" id="filter" placeholder="Search a note"
+                    size="100">
+                </div>
+          </form>
+        </div>
+      </nav>
+      <div id="dateTimeforreminder">
+      </div>
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
+                aria-controls="collapseOne">
+                Take a Note (Add a note)
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseOne" class="collapse false" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              <form id="note-form" name="form">
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Title</label>
+                  <input type="text" class="form-control" id="title">
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Note</label>
+                  <textarea class="form-control" id="content" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Category</label>
+                  <select class="form-control" id="category" name="category">
+                    <option>Normal</option>
+                    <option>Things to remember</option>
+                    <option>İmportant</option>
+                    <option>Recipe</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Reminder (Optional)</label>
+                  <input type="datetime-local" class="form-control" id="reminder">
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="card-body">
+        <hr>
+        <div class="row">
+          <div class="col-md-12">
+            <h4 class="card-title" id="todos-title">Notes</h4>
+            <a id="clear-notes" class="btn btn-dark" href="#">Clear All Note</a>
+
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Normal</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Things to remember</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">İmportant</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Recipe</a>
+              </li>
+            </ul>
+
+            <hr />
+            <div class="card-columns">
+              <!--  <div class="card" style="display:none">                                      
+                <div class="card-body">                    
+                  <img class="card-img-top" src="img/unnamed.jpg"  height="250px" width="350px">
+                  <h5 class="card-title">Card title that wraps to a new line</h5>    
+                  <p class="card-text"># Category</p> 
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>                   
+                  <p class="card-text"><img src="img/bell-fill.svg">
+                  <small class="text-muted">Reminder</small></p>
+                  <a href="#" id = "delete-note" class = "btn btn-danger">Delete Note</a>
+                </div>
+              </div>   -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- Required JS files included -->
+  <script src="ui.js"></script>
+  <script src="storage.js"></script>
+  <script src="note.js"></script>
+  <script src="project.js"></script>
+
+</body>
+
+</html>
