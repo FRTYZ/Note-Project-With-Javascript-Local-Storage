@@ -12,6 +12,11 @@ Developed with Javascript ES6 OOP
 * Delete multiple notes
 * Delete not
 
+
+https://user-images.githubusercontent.com/58048971/186950433-4d13879c-93aa-4ecd-aaae-f312fe265be2.mp4
+
+
+
 ## Note Page (index.html)
 ![alt text](https://github.com/FRTYZ/Note-Project-With-Javascript-Local-Storage/blob/main/img/ss/1.png?raw=true)
 
